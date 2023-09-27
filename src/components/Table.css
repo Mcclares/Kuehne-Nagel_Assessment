@@ -1,0 +1,87 @@
+
+/* Table.css */
+
+/* Стили для всей страницы */
+.page-container {
+  width: 100%;
+  height: 100vh; /* 100% высоты видимой области страницы */
+  margin: 0; /* Убрать отступы */
+  padding: 0; /* Убрать отступы */
+  display: flex;
+  flex-direction: column; /* Разместить элементы вертикально */
+}
+
+/* Стили для обертки таблицы */
+.table-container {
+  flex-grow: 1; /* Занимать все доступное пространство по вертикали */
+ 
+}
+
+/* Стили для таблицы */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0; /* Убрать отступы */
+  padding: 0; /* Убрать отступы */
+  font-size: 12px;
+}
+/* Стили для заголовков таблицы */
+th {
+  background-color: #f6f9fc;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #999999;
+  border: none;
+  
+}
+tr {
+    border-bottom: 1px solid #f7f7f7;
+    padding-top: 20px;
+}
+
+/* Стили для ячеек таблицы */
+td {
+  border: 1px solid #ddd;
+  padding: 20px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttons {
+    padding: 5px;
+    
+}
+#deleteButton {
+    padding-right: 30px;
+   
+}
+.sortButton {
+    width: 30px;
+    height: 20px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0); 
+    background-image: url("../both.png");
+}
+.sortButtonRight {
+    width: 30px;
+    height: 20px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0); 
+    background-image: url("../right.png");
+}
+
+.sortButtonLeft {
+    width: 30px;
+    height: 20px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0); 
+    background-image: url("../left.png");
+}
+
+
+
