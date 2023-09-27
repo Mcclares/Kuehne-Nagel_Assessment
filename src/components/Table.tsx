@@ -92,11 +92,17 @@ export default function Table() {
         status: 'sortButton',
         });
         const handleButtonClick = (field: keyof ButtonClasses) => {
-    // Функция для переключения классов
-    setButtonClasses((prevButtonClasses) => ({
-        ...prevButtonClasses,
-        [field]: prevButtonClasses[field] === "sortButton" ? "sortButtonLeft" : "sortButtonRight",
-    }));
+            // Функция для переключения классов
+            const availableClasses = [ 'sortButtonLeft', 'sortButtonRight'];
+    setButtonClasses((prevButtonClasses) => {
+        const currentClassIndex = availableClasses.indexOf(prevButtonClasses[field]);
+        const nextClassIndex = (currentClassIndex + 1) % availableClasses.length;
+        const nextClass = availableClasses[nextClassIndex];
+        return {
+            ...prevButtonClasses,
+            [field]: nextClass,
+            };
+    });
     };
 
 
